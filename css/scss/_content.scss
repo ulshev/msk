@@ -35,70 +35,7 @@
 }
 
 
-form {
-    margin-right: -25px;
-    margin-left: -5px;
-}
 
-input, textarea {
-    background: transparent;
-    border: 1px solid #fff;
-    height: 45px;
-    width: 265px;
-    box-sizing: border-box;
-    color: #fff;
-    margin-bottom: 20px;
-    margin-right: 15px;
-    padding: 5px 20px;
-    font-family: $font_family_os;
-    font-size: 16px;
-    font-weight: 300;
-    vertical-align: top;
-    
-    &::-webkit-input-placeholder {opacity: 1; color: #fff;}
-	&::-moz-placeholder          {opacity: 1; color: #fff;}/* Firefox 19+ */
-	&:-moz-placeholder           {opacity: 1; color: #fff;}/* Firefox 18- */
-	&:-ms-input-placeholder      {opacity: 1; color: #fff;}
-}
-
-.button_block {
-    display: inline-block;
-}
-
-button[type="submit"], .uFormSubmit {
-	    margin-right: 0;
-	    margin-bottom: 20px;
-	    padding: 0 10px 0 10px;
-	    width: 195px;
-	    height: 45px;
-	    line-height: 43px;
-	    font-size: 16px;
-	    font-weight: 400;
-	    background-color: $color_a;
-	    color: #1d1d1d;
-	    cursor: pointer;
-	    box-sizing: border-box;
-	    @include transition(all);
-	    border: 0;
-	    border-radius: 25px;
-	    text-align: center;
-	    position: relative;
-	    vertical-align: middle;
-	    text-decoration: none;
-	    
-	    &:after {
-		content: "";
-		display: inline-block;
-		width: 11px;
-		height: 11px;
-		margin-left: 10px;
-		vertical-align: -1px;
-		background: url(images/arrow_white.png) right center no-repeat;
-	}
-	&:hover {
-	    text-decoration: none;
-	}
-    }
 
 
 

@@ -8,24 +8,13 @@
 
 footer {
     width: 100%;
-    //bottom: 0;
-    //left: 0;
     position: relative;
     display: block;
-    background: #59b7fc url(images/footer.jpg) center top no-repeat;
-    //background-size: auto;
+    background: #2f3438 url(images/footer.jpg) center top no-repeat;
+    background-size: cover;
     box-sizing: border-box;
-    //border-top: 1px solid #b7d8ff;
     position: relative;
     clear: both;
-    
-    //background-color: #168fff;
-
-    //background: -webkit-linear-gradient(-90deg, #69c1fb, #168fff); /* для webkit-браузеров */
-    //background: -moz-linear-gradient(-90deg, #69c1fb, #168fff); /* для firefox 3.6+ */ 
-    //background: -o-linear-gradient(-90deg, #69c1fb, #168fff); /* для Opera 11.10+ */
-    //background: -ms-linear-gradient(-90deg, #69c1fb, #168fff); /* для IE10+ */
-    //background: linear-gradient(180deg, #69c1fb, #168fff);
     
 
     .in { 
@@ -105,7 +94,7 @@ footer {
 	    img {
 		position: relative;
 		@include transition(opacity);
-		vertical-align: middle;
+		vertical-align: bottom;
 	    }
 	    
 	    .hover {
@@ -122,7 +111,6 @@ footer {
 		
 		.hover {
 		    opacity: 1;
-		    position: absolute;
 		}
 	    }
 	}
@@ -163,7 +151,17 @@ footer {
     
     .form_block {
 	float: right;
-	width: 35%;
+	width: 35.1%;
+	
+	.h5 {
+	    margin-bottom: 31px;
+	}
+	
+	
+	form {
+	    margin-right: -25px;
+	    margin-left: -5px;
+	}
     }
     
     .foo_bottom {
