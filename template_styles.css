@@ -1030,6 +1030,7 @@ footer {
   position: relative;
   display: block;
   background: #59b7fc url(images/footer.jpg) center top no-repeat;
+  background-size: cover;
   box-sizing: border-box;
   position: relative;
   clear: both;
@@ -2053,6 +2054,47 @@ input:-moz-placeholder, textarea:-moz-placeholder {
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   opacity: 1;
   color: #fff;
+}
+
+textarea {
+  height: 118px;
+  width: 100%;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  width: auto;
+  height: auto;
+  margin-bottom: 0;
+  opacity: 0;
+  margin-left: -2px;
+  position: absolute;
+  margin-right: 0;
+}
+
+input[type="checkbox"]:not(checked) + label {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 30px;
+  border: 1px solid transparent;
+  font-weight: 300;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  padding-left: 40px;
+}
+input[type="checkbox"]:not(checked) + label:before {
+  content: '';
+  float: left;
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  background: none;
+  border: 1px solid #fff;
+  position: absolute;
+  left: 0;
+}
+input[type="checkbox"]:not(checked) + label:hover:before {
+  opacity: 0.8;
 }
 
 .button_block {
