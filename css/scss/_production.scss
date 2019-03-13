@@ -1,0 +1,162 @@
+/* start production styles */ 
+
+#production {
+    z-index: 0;
+    //background: #ebfbfe url(images/main_slide_bg.jpg) no-repeat center / cover;
+    
+    .in {
+	padding-top: 35px;
+	padding-bottom: 80px;
+	//margin-top: 1000px;
+    }
+    
+    h2 {
+	margin-bottom: 46px;
+    }
+}
+
+
+.production_block {
+    position: relative;
+    
+    &:after {
+	@include clear();
+    }
+    
+    .prod_item {
+	float: left;
+	width: 20%;
+	height: 563px;
+	box-sizing: border-box;
+	vertical-align: top;
+	position: relative;
+	background: url(images/production_bg.png) no-repeat center top;
+	position: relative;
+	text-align: center;
+	
+	&:before {
+	    content: '';
+	    position: absolute;
+	    z-index: 0;
+	    width: 215px;
+	    height: 216px;
+	    margin-left: -107px;
+	    left: 50%; 
+	    top: 119px;
+	    background-color: $color_a;
+	    border-radius: 110px;
+	}
+	
+	a {
+	    display: block;
+	    position: relative;
+	    height: 100%;
+	    padding-top: 1px;
+	}
+	
+	.bg {
+	    height: 100%;
+	    width: 100%;
+	    background: no-repeat center top ;
+	    position: absolute;
+	    z-index: 0;
+	    opacity: 0;
+	    @include transition(opacity);
+	    
+	    /*&:after {
+		content: '';
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background: url(images/production_grad.png) no-repeat center top;
+		opacity: 0.7;
+	    }*/
+	}
+	
+	.img {
+	    height: 330px;
+	    width: 100%;
+	    text-align: center;
+	    position: relative;
+	    margin-top: 23px;
+	    margin-bottom: 51px;
+	    z-index: 2;
+	    
+	    img {
+		margin: 0 -50px;
+	    }
+	}
+	
+	h4 {
+	    font-weight: 400;
+	    color: $color_a;
+	    height: 58px;
+	    line-height: 30px;
+	    position: relative;
+	    z-index: 2;
+	}
+	.more {
+	    position: relative;
+	    z-index: 2;
+	    color: #fff;
+	}
+	.more:after {
+	    margin-left: 20px;
+	    background-image: url(images/arr_small_white.png);
+	}
+	
+	&:hover{
+	    .bg {
+		opacity: 1;
+	    }
+	
+	    .more {
+		color: $color_a;
+	    }
+	    .more:after {
+		margin-left: 20px;
+		background-image: url(images/arr_small_yellow.png);
+	    }
+	}
+    }
+}
+
+
+@media screen and (max-width: 1600px) {
+    #production {
+	
+	
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    #production {
+	
+    }
+}
+@media screen and (max-width: 1000px) {
+    #production {
+	
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #production {
+	
+    }
+}
+@media screen and (max-width: 600px) {
+    #production {
+	
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #production {
+	
+    }
+}
+
+/* end production styles */

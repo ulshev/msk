@@ -1,0 +1,123 @@
+/* start advantages styles */ 
+
+#advantages {
+    overflow: hidden;
+    z-index: 0;
+    //background: #ebfbfe url(images/main_slide_bg.jpg) no-repeat center / cover;
+    //opacity: 0;
+    //height: 100%;
+    //width: 100%;
+    
+    .in {
+	padding-top: 115px;
+    }
+}
+
+
+.advantages {
+    position: relative;
+    
+    &:after {
+	@include clear();
+    }
+    
+    .adv_item {
+	float: left;
+	width: 25%;
+	margin: 0 2% 40px 0;
+	padding-left: 47px;
+	padding-top: 22px;
+	box-sizing: border-box;
+	vertical-align: top;
+	position: relative;
+	
+	&:nth-child(1) {
+	    width: 22.9%;
+	}
+	&:nth-child(2) {
+	    width: 26.7%;
+	}
+	&:nth-child(3) {
+	    width: 23.2%;
+	}
+	&:nth-child(4) {
+	    margin-right: 0;
+	    width: 21.2%;
+	}
+	
+	&:before, &:after {
+	    content: "";
+	    position: absolute;
+	    width: 131px;
+	    height: 131px;
+	    left: 0;
+	    top: 0;
+	    background-color: $color_a;
+	}
+	
+	&:after {
+	    top: 30px;
+	    left: 27px;
+	    background: url(images/bg_patern.png) repeat left top;
+	}
+	
+	
+	.num {
+	    position: relative;
+	    z-index: 2;
+	    font-size: 100px;
+	    line-height: 100px;
+	    color: #212121;
+	    font-family: $font_family_h;
+	    font-weight: 800;
+	    margin-bottom: 10px;
+	}
+	
+	.h3 {
+	    font-size: 24px;
+	    color: $color_a;
+	    margin-bottom: 2px;
+	}
+	p {
+	    margin-bottom: 20px
+	}
+    }
+}
+
+
+@media screen and (max-width: 1600px) {
+    #advantages {
+	
+	
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    #advantages {
+	
+    }
+}
+@media screen and (max-width: 1000px) {
+    #advantages {
+	
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #advantages {
+	
+    }
+}
+@media screen and (max-width: 600px) {
+    #advantages {
+	
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #advantages {
+	
+    }
+}
+
+/* end advantages styles */
