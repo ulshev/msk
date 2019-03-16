@@ -40,7 +40,7 @@
 	left: 0;
 	top: 0;
 	width: 100%;
-	height: 120px;
+	height: 115%;
 	//opacity: 0;
 	@include transition_slow(all);
 	background-color: rgba(33, 34, 37, 0.65);
@@ -191,8 +191,6 @@
 	    }
 	    	    
 	    li.submenu {
-		
-		
 		&.active, &:hover {
 		    > a {
 			&:after {
@@ -217,16 +215,12 @@
 		    content: "";
 		}
             }
-	    
-	    >li.submenu {
-            }
 	
 	    .active, li:hover  {
 		>a {
 		    color: $color_a;
 		}
 	    }
-	    
 	    
 	    ul {
 		position: absolute;
@@ -311,216 +305,170 @@
 @media screen and (max-width: 1600px) {	
     #header {
 	#logo {
-	    margin-right: 10px;
-	}
-	
-	a.button {
-	    margin-left: 20px;
+	    margin-right: 70px;
 	}
     }
     
     .header_cont {
-	margin-left: 20px;
+	margin-left: 90px;
     }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1300px) {	
     #header {
-	height: 86px;
-	padding-top: 0;
-	.in {
-	    padding-top: 24px;
-	    //padding-bottom: 20px;
+	#logo {
+	    margin-right: 50px;
 	}
+    }
+    
+    .header_cont {
+	margin-left: 50px;
+	max-width: 220px;
+	font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 1200px) {	
+    #header {
 	#logo {
 	    margin-right: 25px;
-	    margin-top: -14px;
 	}
-	
-	a.button {
-	    margin-right: 65px;
-	    margin-left: 30px;
+    }
+    
+    .header_cont {
+	margin-left: 25px;
+    }
+}
+
+@media screen and (max-width: 1100px) {	
+    .header_cont {
+	margin-left: 0px;
+	font-size: 20px;
+    }
+    ul.main_menu {
+	>li {
+	    padding: 0px 5px;
+            }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #header {
+	//height: 86px;
+	.in {
+	    padding-top: 10px;
+	    padding-bottom: 10px;
+	}
+	#logo {
+	    left: 50%;
+	    margin-left: -44px;
 	}
 	
 	nav {
-            right: 20px;
-	    top: 24px;
-	    width: 36px;
-	    height: 36px;
+            left: 20px;
+	    top: 33px;
+	    width: 30px;
+	    height: 30px;
 	    position: absolute;
 	    margin: 0;
-	    
-	    border: 1px solid #7be76e;
-	    background: #7be76e;
-	    border-radius: 25px;
-		//&:hover {
-		//    background: $color_a;
-		//    border-color: $color_a;
-		//}
 	}
     }
 	    
-	    .menu_button_mob {
-		height: 10px;
-		border-bottom: 2px solid #fff;
-		border-top: 2px solid #fff;
-		//border-radius: 3px;
-		display: block;
-		width: 20px;
-		position: absolute;
-		top: 12px;
-		left: 8px;
-		cursor: pointer;
-		
-		
-		&:after {
-		    content: '';
-		    position: absolute;
-		    z-index: 2;
-		    height: 2px;
-		    width: 100%;
-		    top: 4px;
-		    left: 0;
-		    background-color: #fff;
-		}
-		&:before {
-		    content: '';
-		    position: fixed;
-		    right: 20px;
-		    top: 25px;
-		    width: 40px;
-		    height: 40px;
-		    z-index: 1;
-		    //display: none;
-		}
-		&.active:before {
-		    //display: block;
-		    width: 100%;
-		    height: 100%;
-		    top: 0;
-		    left: 0;
-		}
-	    }
-	    ul.main_menu {
-		position: fixed;
-		z-index: 3;
-		width: 310px;
-		right: 0px;
-		margin-top: 0px;
-		top: 86px;
-		padding: 5px 0px;
-		background-color: #f8f8f8;
-		box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.08);
-		display: none;
-		max-height: 80%;
-		overflow: auto;
-		padding-top: 3px;
-		
-		&:before {
-		    content: '';
-		    position: absolute;
-		    width: 100%;
-		    height: 3px;
-		    top: 0px;
-		    left: 0;
-		    background-color: #5fee4d;
-		}
-		
-		>li {
-		    //margin-right: 0;
-		    display: block;
-		    //text-align: right;
-		    //font-size: 18px;
-		    height: auto;
-		    padding: 0 0px;
-		    margin-bottom: 5px;
-		    text-align: left;
-		    
-		    &:before {
-			display: none;
-		    }
-		}
-		li.submenu > ul:after {
-		    display: none;
-		}
-		    
-		a {
-		    display: block;
-		    padding: 10px 20px 10px;
-		    
-		    &:before {
-		        display: block;
-		        opacity: 0;
-		    }
-		    
-		    &:hover {
-		    border-bottom-color: transparent;
-		    }
-		}
-		.active a, a.active  {
-		    &:before {
-			opacity: 1;
-		    }
-		}
-		ul {
-		    position: relative;
-		    top: 0px;
-		    left: 0;
-		    opacity: 1;
-		    display: none;
-		    //padding-left: 20px;
-		    //padding-right: 20px;
-		    //width: 180px;
-		    //margin-top: 10px;
-		    
-		    &:before {
-			display: none;
-		    }
-		    
-		}
-		> li:hover ul {
-		    top: 0px;
-		}
-		li.submenu, &:hover {
-		    
-		    height:  auto;
-		    ul {
-			position: relative;
-			top: 0;
-			left: 0;
-			height: auto;
-			margin-bottom: 0;
-			
-			li.submenu2, &:hover {
-			    height: auto;
-			    ul {
-				position: relative;
-				top: 0;
-				left: 0;
-				height: auto;
-				margin-bottom: 0;
-				
-				li.submenu3, &:hover {
-				    height: auto;
-				    ul {
-					position: relative;
-					top: 0;
-					left: 0;
-					height: auto;
-					margin-bottom: 0;
-					
-					
-				    }
-				}
-			    }
-			}
-		    }
-		}
-	    }
-	    
-    .submenu3 ul {
+    .menu_button_mob {
+	height: 5px;
+	border-bottom: 2px solid #fff;
+	border-top: 2px solid #fff;
+	//border-radius: 3px;
+	display: block;
+	width: 30px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	cursor: pointer;
+	
+	&:after {
+	    content: '';
+	    position: absolute;
+	    z-index: 2;
+	    height: 2px;
+	    width: 50%;
+	    top: 12px;
+	    left: 0;
+	    background-color: #fff;
+	}
+	&:before {
+	    content: '';
+	    position: fixed;
+	    right: 20px;
+	    top: 25px;
+	    width: 40px;
+	    height: 40px;
+	    z-index: 1;
+	    //display: none;
+	}
+	&.active:before {
+	    //display: block;
+	    width: 100%;
+	    height: 100%;
+	    top: 0;
+	    left: 0;
+	}
+    }
+    
+    ul.main_menu {
+	position: fixed;
+	z-index: 3;
+	width: 270px;
+	left: 0px;
+	//margin-top: 0px;
+	top: 70px;
+	//padding: 5px 0px;
+	padding-bottom: 1px;
+	background-color: #33383c;
+	//box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.08);
+	display: none;
+	max-height: calc(100% - 70px);
+	overflow: auto;
+	
 	&:after {
 	    display: none;
+	}
+	
+	>li {
+	    display: block;
+	    height: auto;
+	    padding: 0 0px;
+	    margin-bottom: 5px;
+	    text-align: left;
+	}
+	    
+	a {
+	    display: block;
+	    padding: 10px 20px 10px;
+	    
+	    &:before {
+	        display: block;
+	        opacity: 0;
+	    }
+	    
+	    &:hover {
+	    border-bottom-color: transparent;
+	    }
+	}
+	ul {
+	    position: relative;
+	    top: 0px;
+	    left: 0;
+	    opacity: 1;
+	    display: none;
+	    
+	    &:before {
+		display: none;
+	    }
+	    
+	}
+	> li:hover ul {
+	    top: 0px;
 	}
     }
 }
@@ -535,77 +483,63 @@
 
 @media screen and (max-width: 800px) {
     #header {
-       height: 75px;
+       //height: 75px;
 	#logo {
 	    img {
-		height: 50px;
+		width: 60px;
 	    }
 	}
-	a.button {
-	    margin-right: 60px;
-	    margin-left: 20px;
-	}
 	nav {
-            right: 20px;
-	    top: 20px;
-	    width: 35px;
-	    height: 33px;
-	}
-	ul.main_menu {
-	    top: 75px;
+	    top: 23px;
+	    width: 20px;
+	    height: 20px;
 	}
     }
     
     .header_cont {
-	font-size: 16px;
-	margin-top: -7px;
-	margin-left: 0;
+	font-size: 18px;
+	//margin-top: -7px;
+	//margin-left: 0;
+    } 
+    ul.main_menu {
+	top: 55px;
     }
     .menu_button_mob {
-	width: 17px;
-	top: 9px;
-	left: 9px;
+	width: 20px;
+	height: 3px;
 	
 	&:after {
-	    top: 4px;
+	    top: 8px;
 	}
     }
 }
 
 @media screen and (max-width: 600px) {
     #header {
-	a.button {
-	    display: none;
-	}
+	
     }
     .header_cont {
-	font-size: 16px;
-	margin-top: -7px;
-	margin-right: 60px;
+	width: auto;
+	margin-top: 10px;
+	
+	a:first-child {
+	    display: none;
+	}
+	
+	.order_call {
+	    width: 25px;
+	    height: 25px;
+	    text-indent: 1000px;
+	    overflow: hidden;
+	    background: url(images/icon_tel_yellow.png) no-repeat center;
+	}
     }
 }
 
 @media screen and (max-width: 450px) {
     #header {
-	height: 65px;
-	
-	.in {
-	    padding-top: 15px;
-	    padding-bottom: 15px;
-	}
-	#logo {
-	    //width:40px;
-	    //overflow:hidden;
-	    margin-top: -9px;
-	}
-	.header_cont {
-	    display: none;
-	}
 	nav {
-	    top: 15px;
-	}
-	ul.main_menu {
-	    top: 65px;
+            left: 10px;
 	}
     }
 }

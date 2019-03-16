@@ -1,5 +1,42 @@
 /* start content styles */ 
 
+main.content {
+    padding-top: 140px;
+    padding-bottom: 80px;
+}
+#about_page .content {
+    padding-top: 0px;
+    
+    #top {
+	background: url(images/about_page_bg.jpg) no-repeat center bottom / cover;
+	color: #fff;
+    
+	h1, h2, h3 {
+	    color: #fff;
+	}
+    }
+}
+#service_page .content {
+    padding-top: 0px;
+    
+    #top {
+	background: url(images/service_page_bg.jpg) no-repeat center bottom / cover;
+    }
+}
+#top {
+    padding-top: 140px;
+    padding-bottom: 100px;
+    margin-bottom: 50px;
+    
+    .text {
+	max-width: 435px;
+    }
+    
+    .button {
+	margin-top: 30px;
+    }
+}
+
 .content.main_section {
     .in {
 	padding-top: 30px;
@@ -15,9 +52,40 @@
     }
 }
 
+.bread_crumbs {
+    position: relative;
+    margin-bottom: 40px;
+    
+    ul li {
+	display: inline-block;
+	padding-left: 19px;
+	margin-right: 10px;
+	position: relative;
+	
+	&:before {
+	    content: '';
+	    position: absolute;
+	    width: 5px;
+	    height: 5px;
+	    top: 13px;
+	    left: 0;
+	    background-color: $color_a;
+	}
+	
+	&:first-child {
+	    padding-left: 0;
+	    
+	    &:before {
+		display: none;
+	    }
+	    
+	}
+    }
+}
+
 
 .left, .right {
-    max-width: 45%;
+    max-width: calc(50% - 10px);
     
     img {
 	display: inline-block;
@@ -26,17 +94,69 @@
 }
 .left {
     float: left;
-    margin: 5px 30px 20px 0;
+    margin: 5px 65px 50px 0;
 }
 .right {
     float: right;
     clear: right;
-    margin: 5px 0 20px 30px;
+    margin: 5px 0 50px 65px;
+}
+.left + h2, .left +h3, .left +h4, .right + h2, .right + h3, .right + h4 {
+	padding-top: 30px;
+	margin-bottom: 30px;
 }
 
 
+.text {
 
-
+    ul {
+	padding-bottom: 15px;
+	overflow: hidden;
+	li {
+	    position:  relative;
+	    padding-left: 36px;
+	    margin-bottom: 5px;
+	    
+	    &:before {
+                content: '';
+		position: absolute;
+		left: 0;
+                top: 13px;
+                width: 5px;
+                height: 5px;
+		background-color: $color_a;
+	    }
+	}
+    }
+    
+    ol {
+	list-style-type: none;
+	counter-reset: ol_num;
+	padding-left: 0;
+	position: relative;
+	z-index: 1;
+	padding-bottom: 25px;
+	overflow: hidden;
+	
+	li {
+	    position: relative;
+	    padding-left: 35px;
+	    margin-bottom: 5px;
+	    
+	    &:before {
+		position: absolute;
+		left: 0;
+		top: 0px;
+		counter-increment: ol_num;
+		content: counter(ol_num)".";
+		font-family: $font_family_h;
+		font-weight: 800;
+		letter-spacing: 0.5px;
+		color: $color_a;       
+	    }
+	}
+    }
+}
 
 
 

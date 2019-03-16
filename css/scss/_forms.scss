@@ -91,7 +91,7 @@
 	margin-bottom: 35px;
 	margin-right: 15px;
 	height: 48px;
-	width: 264px;
+	width: calc(50% - 20px);
 	max-width: 100%;
 	background: transparent;
 	border: 1px solid #fff;
@@ -112,8 +112,9 @@
 
     textarea {
 	height: 119px;
-	width: 548px;
-	margin-bottom: 15px
+	width: calc(100% - 20px);
+	margin-right: 0;
+	margin-bottom: 15px;
     }
     
     .check {
@@ -167,9 +168,7 @@
 	    @include transition(all);
 	}
 	
-	&:hover:before {
-	    opacity: 0.8;
-	}
+	
     }
     input[type="checkbox"]:checked + label {
 	
@@ -178,13 +177,13 @@
 	}
     }
 
-.button_block {
-    display: inline-block;
-    vertical-align: top;
-    padding-top: 4px;
-}
-
-button[type="submit"], .uFormSubmit {
+    .button_block {
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 4px;
+    }
+    
+    button[type="submit"], .uFormSubmit {
 	    margin-right: 0;
 	    margin-bottom: 20px;
 	    padding: 0 10px 0 10px;
@@ -220,18 +219,47 @@ button[type="submit"], .uFormSubmit {
 
 
 @media screen and (max-width: 1600px) {
-    
+    .form_block {
+	.check {
+	    margin-right: 20px;
+	}
+    }
 }
 
-@media screen and (max-width: 1300px) {
-    
+@media screen and (max-width: 1400px) {
+    .form_block {
+	.check {
+	    font-size: 12px;
+	    width: 40.5%;
+	    max-width: 225px;
+	    padding-left: 30px;
+	}
+    }
+}
+@media screen and (max-width: 1200px) {
+    .form_block {
+	.check {
+	    width: 30%;
+	}
+    }
 }
 @media screen and (max-width: 1000px) {
-    
+    .form_block {
+	.check {
+	    width: 45%;
+	}
+	button[type="submit"], .uFormSubmit {
+	    width: 150px;
+	}
+    }
 }
 
 @media screen and (max-width: 800px) {
-    
+    .form_block {
+	.check {
+	    width: 38%;
+	}
+    }
 }
 @media screen and (max-width: 600px) {
     

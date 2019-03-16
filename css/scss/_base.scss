@@ -58,12 +58,14 @@ body {
     min-height: 100%;
     display: table;
     
-background: url(images/site.jpg) center top no-repeat;
-background-size: auto;
+//background: url(images/site.jpg) center top no-repeat;
+//background-size: auto;
 }
-#index .wrapper {
-    display: block;
-    height: auto;
+#index, #about_page {
+    .wrapper {
+	display: block;
+	height: auto;
+    }
 }
 
 a {
@@ -117,12 +119,12 @@ h6, .h6 {
     font-size: 14px;
 }
 
-p {
-    margin-bottom: 30px;
-}
+//p {
+    //margin-bottom: 30px;
+//}
 
 
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1400px) {
     body {   
 	font-size: 14px;
 	line-height: 180%;
@@ -130,14 +132,16 @@ p {
     h1, .h1 {
         font-size: 35px;
         letter-spacing: 1px;
-        line-height: 130%;
+        line-height: 45px;
 	margin-bottom: 40px;
     }
     h2, .h2 {
-        font-size: 31px;
+        font-size: 30px;
+	line-height: 40px;
     }
     h3, .h3 {
-        font-size: 23px;
+        font-size: 22px;
+	line-height: 40px;
     }
 }
 
@@ -150,12 +154,29 @@ p {
     }
     h2, .h2 {
         font-size: 26px;
+	line-height: 35px;
     }
     h3, .h3 {
         font-size: 21px;
+	line-height: 35px;
     }
 }
-
+@media screen and (max-width: 600px) {
+    h1 {
+	font-size: 20px;
+	line-height: 120%;
+	margin-bottom: 20px;
+	letter-spacing: 1.0px;
+    }
+    h2, .h2 {
+        font-size: 19px;
+	line-height: 30px;
+    }
+    h3, .h3 {
+        font-size: 18px;
+	line-height: 30px;
+    }
+}
 
 .clear {
     @include clear();
@@ -242,7 +263,7 @@ p {
 	    height: 15px;
 	    top: 50%;
 	    left: 50%;
-	    margin-top: -7px;
+	    margin-top: -8px;
             margin-left: -4px;
             background: url(images/arr_small_black2.png) no-repeat center;
 	    @include transition(all);
@@ -255,7 +276,7 @@ p {
 	}
 	
 	&:hover {
-	    border-color: $color_a;
+	    border-color: $color_a_hover;
 	    &:before {
 		opacity: 0;
 	    }
@@ -265,14 +286,14 @@ p {
 	}
     }
     .slick-prev {
-	//left: 0px;
+	left: 0px;
 	&:before, &:after {
 	    transform: rotate(180deg);
 	    margin-left: -6px;
 	}
     }
     .slick-next {
-	//right: 0px;
+	right: 0px;
 	
 	//&:before {
 	    //background-position: right center;
