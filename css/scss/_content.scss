@@ -108,7 +108,6 @@ main.content {
 
 
 .text {
-
     ul {
 	padding-bottom: 15px;
 	overflow: hidden;
@@ -154,6 +153,115 @@ main.content {
 		letter-spacing: 0.5px;
 		color: $color_a;       
 	    }
+	}
+    }
+}
+
+
+.pagination {
+    margin-bottom: 100px;
+    text-align: center;
+    li {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 600;
+	margin: 0 3px;
+	padding: 0 6px;
+	
+	&:before {
+	    display: none;
+	}
+	
+	a {
+	    display: block;
+	    line-height: 16px;
+	    vertical-align: middle;
+	    color: $color_text;
+	    text-decoration: none;
+	    
+	    &:hover {
+		color: $color_a_hover;
+	    } 
+		
+	    &.active {
+		border-bottom: 1px solid;
+	    }
+	}
+	
+	&.pag-ar {
+	    a {
+		text-indent: -10000px;
+		position: relative;
+		background: none;
+		width: 15px;
+		
+		&:before {
+		    content: "";
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    margin-top: -10px;
+		    margin-left: -8px;
+		    width: 15px;
+		    height: 15px;
+		    vertical-align: -1px;
+		    background: url(images/arr_small_black.png) no-repeat center;
+		    z-index: 2;
+		    border: 2px solid ;
+		    border-radius: 15px;
+		    @include transition(all);
+		}
+		
+		&:hover:before {
+		    background-image: url(images/arr_small_orange.png);
+		}
+	    }
+	}
+	
+	&.prev {
+	    a {
+		&:before {
+		    transform: rotate(180deg);
+		}
+	    }
+	}
+    }
+}
+
+.table {
+    padding-bottom: 100px;
+    table {
+	min-width: 100%;
+    }
+    
+    tr:nth-child(2n+1) {
+	background-color: #f0f0f0;
+    }
+    
+    th {
+	background-color: #33383c;
+	color: #fff;
+	text-transform: uppercase;
+	font-family: $font_family_h;
+	font-weight: 400;
+	padding: 15px 50px;
+	text-align: left;
+    }
+    
+    td {
+	text-transform: uppercase;
+	font-weight: 400;
+	padding: 15px 50px;
+	
+	&:last-child {
+	    text-transform: none;
+	}
+	
+	&.color {
+	    background-color: #f0f0f0;
+	    width: 38%;
 	}
     }
 }
