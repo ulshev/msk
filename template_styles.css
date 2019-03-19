@@ -389,50 +389,50 @@ ul.slick-dots li button {
 }
 
 .tab_buttons {
-  width: 100%;
-  left: 0;
-  z-index: 5;
-  padding-top: 50px;
-  margin-bottom: 27px;
-  border-bottom: 1px solid #94ccea;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  text-align: right;
 }
-.tab_buttons .tab_but {
-  display: inline-block;
-  margin-right: 0px;
-  padding: 5px 20px;
+.tab_buttons span {
+  position: absolute;
   cursor: pointer;
-  height: 46px;
-  line-height: 36px;
-  box-sizing: border-box;
-  color: #878a90;
-  font-family: 'Oswald';
-  font-size: 24px;
-  margin-bottom: -2.6px;
-  position: relative;
+  z-index: 2;
+  white-space: nowrap;
+  right: 0;
+  color: #f5cd4b;
+  -webkit-transition: border 0.3s ease 0s;
+  -moz-transition: border 0.3s ease 0s;
+  -o-transition: border 0.3s ease 0s;
+  transition: border 0.3s ease 0s;
 }
-.tab_buttons .tab_but a {
+.tab_buttons span:after {
+  display: inline-block;
+  content: "";
+  width: 15px;
+  height: 15px;
+  border: 2px solid;
+  border-radius: 15px;
+  margin-left: 8px;
+  vertical-align: -5px;
+  background: url(images/arr_small_yellow.png) no-repeat center;
+}
+.tab_buttons span a {
   color: #777777;
   margin: -5px -20px;
   padding: 5px 20px;
   display: block;
 }
-.tab_buttons .tab_but.active {
-  border-bottom: 5px solid #4a83bc;
-  color: #0d121f;
+.tab_buttons span.active {
+  opacity: 0;
+  z-index: 1;
 }
-.tab_buttons .tab_but.active:after {
-  content: '';
-  position: absolute;
-  right: -14px;
-  top: 0;
-  border-top: 23px solid transparent;
-  border-bottom: 23px solid transparent;
+.tab_buttons span:hover {
+  color: #ffc300;
 }
-.tab_buttons .tab_but.active a {
-  color: #fff;
-}
-.tab_buttons .tab_but.active a:hover {
-  text-decoration: none;
+.tab_buttons span:hover:after {
+  background-image: url(images/arr_small_orange.png);
 }
 
 .main_section {
@@ -984,7 +984,7 @@ ul.main_menu > li:hover ul {
     height: 25px;
     text-indent: 1000px;
     overflow: hidden;
-    background: url(images/icon_tel_yellow.png) no-repeat center;
+    background: url(images/icon_tel_yellow2.png) no-repeat center;
   }
 }
 @media screen and (max-width: 450px) {
@@ -2646,5 +2646,151 @@ main.content {
 }
 
 /* end projects styles */
+/* start contacts styles */
+.text.contacts {
+  text-align: justify;
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.text.contacts:after {
+  display: inline-block;
+  content: '';
+  width: 95%;
+  height: 0px;
+  line-height: 0;
+}
+.text.contacts a {
+  color: #000000;
+}
+.text.contacts a:hover {
+  color: #ffc300;
+}
+
+.cont {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 45px;
+  background: no-repeat left 4px;
+}
+.cont.tel {
+  background-image: url(images/icon_tel_yellow.png);
+}
+.cont.fax {
+  background-image: url(images/icon_fax_yellow.png);
+}
+.cont.address {
+  background-image: url(images/icon_address_yellow.png);
+}
+.cont.email {
+  background-image: url(images/icon_email_yellow.png);
+}
+.cont.from_center {
+  background-image: url(images/icon_car_yellow1.png);
+}
+.cont.from_area {
+  background-image: url(images/icon_car_yellow2.png);
+}
+.cont.afoot {
+  background-image: url(images/icon_afoot_yellow.png);
+}
+
+#map {
+  float: left;
+  width: 62.7%;
+  margin-bottom: 30px;
+  background-color: #f9f9f9;
+  height: 590px;
+}
+
+.cont_links {
+  width: 62.7%;
+  float: left;
+  text-align: justify;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.cont_links:after {
+  display: inline-block;
+  content: '';
+  width: 95%;
+  height: 0px;
+  line-height: 0;
+}
+.cont_links h4 {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0;
+}
+.cont_links a {
+  color: #000000;
+}
+.cont_links a:hover {
+  color: #f5cd4b;
+}
+.cont_links .cont {
+  padding-left: 55px;
+}
+
+.right_block {
+  margin-left: 65.3%;
+  background: #33383c url(images/right_block_bg.jpg) no-repeat center/cover;
+  min-height: 648px;
+  box-sizing: border-box;
+  color: #fff;
+  padding: 95px 45px 32px 55px;
+}
+.right_block h2, .right_block h3, .right_block h4, .right_block h5, .right_block h6 {
+  color: #fff;
+}
+.right_block .form_block form {
+  margin-right: -15px;
+}
+.right_block .form_block input {
+  margin-bottom: 28px;
+}
+.right_block .form_block .email {
+  width: calc(100% - 20px);
+}
+.right_block .form_block textarea {
+  margin-bottom: 28px;
+}
+.right_block .form_block .check {
+  width: auto;
+  margin-right: 10px;
+  font-size: 14px;
+  letter-spacing: 0px;
+  padding-left: 25px;
+  padding-top: 3px;
+  margin-bottom: 28px;
+}
+.right_block .how_to_get h5 {
+  font-weight: 400;
+  padding: 10px 0 0 45px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.right_block .how_to_get h5:before, .right_block .how_to_get h5:after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.right_block .how_to_get h5:before {
+  height: 25px;
+  width: 1px;
+  background: #f5cd4b;
+  top: 2px;
+}
+.right_block .how_to_get h5:after {
+  height: 1px;
+  width: 22px;
+  background: #f5cd4b;
+  top: 26px;
+}
+.right_block .how_to_get .accordion > div {
+  padding: 0 0 30px 45px;
+}
+
+/* end contacts styles */
 
 /*# sourceMappingURL=template_styles.css.map */

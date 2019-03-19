@@ -89,6 +89,16 @@ $(document).ready(function() {
 	});
 	
 	
+	$('.tab_buttons span').on('click', function(){ 
+		var tabs = $(this).parents('.tabs_container'),
+		id = $('.tab_buttons span', tabs).index(this);
+	    
+		$(this).addClass('active').siblings().removeClass('active');
+		$('.tab:eq(' + id + ')', tabs).addClass('active').siblings().removeClass('active');
+	    
+	});
+	
+	
 	$( function() {
 	    $( ".accordion" ).accordion({
 	      heightStyle: "content",

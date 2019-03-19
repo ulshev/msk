@@ -16,6 +16,7 @@
 	<link rel="stylesheet" type="text/css"  media="all" href="template_styles.css">
 	
 	<script type="text/Javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script type="text/javascript" src="js/slick.min.js"></script>
 	<script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script> 
@@ -91,6 +92,230 @@
 		    <div class="cont address">107497, Москва, ул. Байкальская д.4</div>
 		    <div class="cont email"><a href="mailto:office@ ">office@dymohody.ru</a></div>
 		</div>
+		
+		<div id="map">
+		    
+		</div>
+		
+		<div class="text cont_links">
+		    <h4><span class="light">как</span> добраться:</h4>
+		    <div class="cont from_center"><a href="#">на машине из центра</a></div>
+		    <div class="cont from_area"><a href="#">на машине из области</a></div>
+		    <div class="cont afoot"><a href="#">пешком</a></div>
+		</div>
+		
+		<div class="right_block tabs_container">
+		    <div class="tab_buttons">
+			<span class="active">Напишите нам</span>
+			<span>как добраться?</span>
+		    </div>
+		    <div class="form_block tab active">
+			<form>
+			    <h3>Напишите нам</h3>
+			    <input value="" class="name" placeholder="Имя" type="text" name="name">
+			    <input value="" class="tel" placeholder="Телефон" type="text" name="tel" >
+			    <input value="" class="email" placeholder="E-mail" type="text" name="email">
+			    <textarea placeholder="Сообщение"></textarea>
+			    <div class="check"><input value="" id="check" type="checkbox"> <label for="check">Я даю разрешение на обработку своих</label> <a href="#">персональных&nbsp;данных</a></div>
+			    <div class="button_block"><button type="submit">Отправить</button></div> 
+			</form>
+		    </div>
+		    <div class="how_to_get tab">
+			<h3>как добраться?</h3>
+			<div class="accordion">
+			    <h5>из области</h5>
+			    <div>МКАД 105-й километр<br>
+Направляйтесь на запад по ш. Щелковское в направлении уп. Хабаровская<br>
+Сверните направо на перекрестке с ул. Бирюсинка<br>
+2-й поворот направо на ул. Байкальская<br>
+ул. Байкальская, д. 4, 2-й этаж</div>
+			    <h5>из центра</h5>
+			    <div>Направляйтесь на северо-восток по ш. Щелковское в направлении ул. Никитинская<br>
+2-й поворот налево на ул. Бирюсинка<br>
+Сверните направо на перекрестке с ул. Байкальская<br>
+ул. Байкальская, д. 4, 2-й этаж</div>
+			    <h5>пешком</h5>
+			    <div>станция метро Щелковская (первый вагон из центра, выход к автовокзалу)<br>
+Направляйтесь на север по ул. Уральская в направлении ул. Амурская<br>
+На перекрестке с круговым движением сверните на 1-й выезд на ул. Байкальская<br>
+ул. Байкальская, д. 4, 2-й этаж</div>
+			</div>
+		    </div>
+		</div>
+		
+		
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAW5waRqX6v-9byeN0ppkdgxdLG-8MotM4&callback=initMap"></script>
+	    <script>
+	    function initMap() {
+		var uluru = {lat: 55.816441073411006, lng: 37.78186804999996};
+		var map = new google.maps.Map(document.getElementById('map'), {
+		  zoom: 15,
+		  center: uluru,
+		  styles: [
+  {
+    "featureType": "landscape",
+    "stylers": [
+      {
+        "color": "#f9f9f9"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "stylers": [
+      {
+        "color": "#b4b4b4"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#dde1e2"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "color": "#6a7b83"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "stylers": [
+      {
+        "color": "#dadada"
+      },
+      {
+        "weight": 0.5
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "color": "#b4b4b4"
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "transit",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "color": "#000000"
+      }
+    ]
+  },
+  {
+    "featureType": "transit",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#ecf1f5"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "color": "#dadada"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  }
+]
+		});
+		var marker = new google.maps.Marker({
+		  position: uluru,
+		  map: map,
+		  icon: {
+		    url:'images/icon_map.png',
+		    anchor: new google.maps.Point(22, 24)
+		  },
+		});
+		
+	    }
+	</script>
 		
 		
 	    </div>

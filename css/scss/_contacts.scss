@@ -1,0 +1,199 @@
+/* start contacts styles */ 
+
+.text.contacts {
+    text-align: justify;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    
+    &:after {
+        display: inline-block;
+        content: '';
+        width: 95%;
+        height: 0px;
+        line-height: 0;
+    }
+    
+    a {
+        color: $color_text;
+        
+        &:hover {
+            color: $color_a_hover;
+        }
+    }
+}
+
+.cont {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 45px;
+    background: no-repeat left 4px;
+    
+    &.tel {
+        background-image: url(images/icon_tel_yellow.png);
+    }
+    
+    &.fax {
+        background-image: url(images/icon_fax_yellow.png);
+    }
+    
+    &.address {
+        background-image: url(images/icon_address_yellow.png);
+    }
+    
+    &.email {
+        background-image: url(images/icon_email_yellow.png);
+    }
+    
+    &.from_center {
+        background-image: url(images/icon_car_yellow1.png);
+    }
+    
+    &.from_area {
+        background-image: url(images/icon_car_yellow2.png);
+    }
+    
+    &.afoot {
+        background-image: url(images/icon_afoot_yellow.png);
+    }
+}
+
+#map {
+    float: left;
+    width: 62.7%;
+    margin-bottom: 30px;
+    background-color: #f9f9f9;
+    height: 590px;
+}
+
+.cont_links {
+    width: 62.7%;
+    float: left;
+    //margin-bottom: 30px;
+    text-align: justify;
+    font-weight: 600;
+    letter-spacing: 1px;
+    
+    &:after {
+        display: inline-block;
+        content: '';
+        width: 95%;
+        height: 0px;
+        line-height: 0;
+    }
+    
+    h4 {
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 0;
+    }
+    
+    a {
+        color: $color_text;
+        
+        &:hover {
+            color: $color_a;
+        }
+    }
+    
+    .cont {
+        padding-left: 55px;
+    }
+}
+
+.right_block {
+    margin-left: 65.3%;
+    background: #33383c url(images/right_block_bg.jpg) no-repeat center / cover;
+    min-height: 648px;
+    box-sizing: border-box;
+    color: #fff;
+    padding: 95px 45px 32px 55px;
+    
+    h2, h3, h4, h5, h6 {
+        color: #fff;
+    }
+    
+    .form_block {
+        form {
+            margin-right: -15px;
+        }
+        input {
+            margin-bottom: 28px
+        }
+        
+        .email {
+            width: calc(100% - 20px);
+        }
+        
+        textarea {
+            margin-bottom: 28px;
+        }
+        
+        .check {
+            width: auto;
+            margin-right: 10px;
+            font-size: 14px;
+            letter-spacing: 0px;
+            padding-left: 25px;
+            padding-top: 3px;
+            margin-bottom: 28px;
+        }
+    }
+    
+    .how_to_get {
+        h5 {
+            font-weight: 400;
+            padding: 10px 0 0 45px;
+            position: relative;
+            margin-bottom: 30px;
+            
+            &:before, &:after {
+		content: "";
+		position: absolute;
+		left: 0;
+	    }
+		
+	    &:before {
+		height: 25px;
+		width: 1px;
+		background: $color_a;
+		top: 2px;
+	    }
+	    &:after {
+		height: 1px;
+		width: 22px;
+		background: $color_a;
+		top: 26px;
+	    }
+        }
+        .accordion > div {
+            padding: 0 0 30px 45px;
+        }
+        
+    }
+}
+
+
+@media screen and (max-width: 1600px) {
+    
+}
+
+@media screen and (max-width: 1300px) {
+    
+}
+@media screen and (max-width: 1000px) {
+    
+}
+
+@media screen and (max-width: 800px) {
+    
+}
+@media screen and (max-width: 600px) {
+    
+}
+
+@media screen and (max-width: 450px) {
+    
+}
+
+/* end contacts styles */
