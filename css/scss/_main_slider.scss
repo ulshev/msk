@@ -125,6 +125,10 @@
 		}
 	    }
 	    
+	    .mob {
+		display: none;
+	    }
+	    
 	    .hover_text {
 		overflow: hidden;
 		opacity: 0;
@@ -162,12 +166,12 @@
 		}
 		
 		.hover_text {
-		    opacity: 1;
+		    opacity: 1; 
+		    .more:after {
+			margin-left: 18px;
+		    }
 		}
 		
-		.more:after {
-		    margin-left: 18px;
-		}
 	    }
 	    
 	}

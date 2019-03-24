@@ -66,6 +66,81 @@
     }
 }
 
+.galery {
+    position: relative;
+    width: calc(50% - 20px);
+    margin-bottom: 55px;
+    height: 550px;
+    
+    div {
+	width: 100%;
+	height: 100%;
+    }
+    a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	//cursor: crosshair;
+    }
+	    
+    img {
+	vertical-align: middle;
+	display: inline;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	cursor: crosshair;
+    }
+    
+    ul.slick-dots {
+	text-align: center;
+	width: 100%;
+	top: auto;
+	bottom: 20px;
+	left: 0%;
+	margin-left: 0;
+	z-index: 2;
+	list-style-type: none;
+	
+	li {
+	    display: inline-block;
+	    position: relative;
+	    width: auto;
+	    margin-right: 8px;
+	    margin-left: 8px;
+	    font-size: 10px;
+	    line-height: 12px;
+	    text-align: center;
+	    opacity: 1;
+	    cursor: pointer;
+	    
+	    &:before {
+		content: "";
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		background-color: $color_a;
+	    }
+	    
+	    &:hover {
+		&:before {
+		    background-color: $color_a_hover;
+		}
+	    }
+	   
+	    
+	    &.slick-active {
+		&:before {
+		    background-color: #fff;
+		}
+	    }
+	    
+	    button {
+		display: none;
+	    }
+	}
+    }
+}
 
 
 

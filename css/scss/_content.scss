@@ -94,12 +94,12 @@ main.content {
 }
 .left {
     float: left;
-    margin: 5px 65px 50px 0;
+    margin: 0px 65px 50px 0;
 }
 .right {
     float: right;
     clear: right;
-    margin: 5px 0 50px 65px;
+    margin: 0px 0 50px 65px;
 }
 .left + h2, .left +h3, .left +h4, .right + h2, .right + h3, .right + h4 {
 	padding-top: 30px;
@@ -108,6 +108,7 @@ main.content {
 
 
 .text {
+    padding-top: 1px;
     ul {
 	padding-bottom: 15px;
 	overflow: hidden;
@@ -251,16 +252,41 @@ main.content {
     }
     
     td {
-	text-transform: uppercase;
+	//text-transform: uppercase;
 	font-weight: 400;
 	padding: 15px 50px;
+	line-height: 23px;
+	
+	&:first-child {
+	    //text-transform: none;
+	    width: 20%;
+	}
 	
 	&:last-child {
-	    text-transform: none;
+	    //text-transform: none;
+	    width: 35%;
 	}
 	
 	&.color {
 	    background-color: #f0f0f0;
+	    width: 38%;
+	}
+    }
+}
+
+.table.price {
+    
+    
+    td {
+	text-transform: uppercase;
+	&:first-child {
+	    width: auto;
+	}
+	&:last-child {
+	    text-transform: none;
+	    width: auto;
+	}
+	&.color {
 	    width: 38%;
 	}
     }

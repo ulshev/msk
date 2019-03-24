@@ -114,6 +114,84 @@
     
 }
 
+.more_text_link {
+    
+    .link {
+	color: $color_a;
+	font-weight: 600;
+	text-decoration: underline;
+	cursor: pointer;
+	
+	&:hover {
+	    text-decoration: none;
+	}
+    }
+}
+.more_text_block {
+    display: none;
+    //overflow: visible !important;
+    clear: left;
+    padding-bottom: 20px;
+}
+
+.prev_next {
+    margin-top: 70px;
+    font-weight: 600;
+    margin-bottom: 55px;
+    
+    a {
+	color: #bd9515;
+    }
+    
+    .prev {
+	margin-right: 50px;
+	&:before {
+	    content: '';
+	    display: inline-block;
+	    width: 16px;
+	    height: 16px;
+	    border: 2px solid ;
+	    border-radius: 15px;
+	    margin-right: 18px;
+	    vertical-align: -5px;
+	    background: url(images/arr_small_orange.png) no-repeat center;
+	    transform: rotate(-180deg)
+;	}
+    }
+    .next {
+	&:after {
+	    content: '';
+	    display: inline-block;
+	    width: 16px;
+	    height: 16px;
+	    border: 2px solid ;
+	    border-radius: 15px;
+	    margin-left: 18px;
+	    vertical-align: -5px;
+	    background: url(images/arr_small_orange.png) no-repeat center;
+;	}
+    }
+}
+
+.project_description {
+    padding-bottom: 25px;
+    p {
+	position: relative;
+	margin-bottom: 5px;
+	
+	em {
+	    display: inline-block;
+	    width: 215px;
+	    color: #7f7f7f;
+	    font-style: normal;
+	}
+    }
+}
+
+h3.clear {
+    padding-top: 50px;
+}
+
 
 @media screen and (max-width: 1600px) {
     #promotions {

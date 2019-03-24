@@ -108,6 +108,30 @@ $(document).ready(function() {
 	} );
 	
 	
+	$('.more_text_link').html('... <span class="link">Показать больше</span>');
+
+	$('.more_text_link').on('click', function(e){
+	  e.preventDefault();
+	  
+	  var
+	    $this = $(this),
+	    content = $(this).parents('.text').find('.more_text_block');  
+	  
+	  
+	  if(!$this.hasClass('trigger')){
+	    $this.addClass('trigger');
+	    $this.html('.');
+	    
+	    content.slideDown();
+	  } else {
+	    $this.removeClass('trigger');
+	    $this.html('... <span class="link">Показать больше</span>');
+	    
+	    content.slideUp();
+	  }
+	});
+	
+	
 	
 	$('.promotions_menu').slick({
 	    slidesToShow: 5,
@@ -167,6 +191,67 @@ $(document).ready(function() {
 	    fade: true,
 	    asNavFor: '.projects_menu',
 	});
+	
+	
+	$('.galery').slick({
+	    slidesToShow: 1,
+	    slidesToScroll: 1,
+	    arrows: true,
+	    dots: true,
+	    fade: true,
+	    prevArrow: '<span class="slick-prev">&nbsp;</span>',
+	    nextArrow: '<span class="slick-next">&nbsp;</span>',
+	});
+	
+	$('.catalog.slider').slick({
+	    slidesToShow: 4,
+	    slidesToScroll: 1,
+	    arrows: true,
+	    dots: false,
+	    centerMode: false,
+	    //fade: true,
+	    prevArrow: '<span class="slick-prev">&nbsp;</span>',
+	    nextArrow: '<span class="slick-next">&nbsp;</span>',
+	});
+	
+	$('.products_images .main_img').slick({
+	    slidesToShow: 1,
+	    slidesToScroll: 1,
+	    arrows: false,
+	    fade: true,
+	    //variableWidth: true,
+	    adaptiveHeight: true,
+	    asNavFor: '.products_images .small_images'
+	  });
+	$('.products_images .small_images').slick({
+	    slidesToShow: 3,
+	    slidesToScroll: 1,
+	    arrows: true,
+	    prevArrow: '<span class="slick-prev">&nbsp;</span>',
+	    nextArrow: '<span class="slick-next">&nbsp;</span>',
+	    asNavFor: '.products_images .main_img',
+	    dots: false,
+	    //centerMode: true,
+	    vertical: true,
+	    focusOnSelect: true,
+	    responsive: [
+		  {
+		    breakpoint: 1021,
+		    settings: {
+		      vertical: false,
+		      slidesToShow: 3,
+		    }
+		  },
+		  {
+		    breakpoint: 350,
+		    settings: {
+		      slidesToShow: 2,
+		      vertical: false,
+		    }
+		  },
+		]
+	});
+	
 	
 	$(window).on('load resize', function(){
 		if ( window.innerWidth>1201 && $('#main_slide .activity').hasClass('slick-initialized') ) {
