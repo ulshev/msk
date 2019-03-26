@@ -190,6 +190,24 @@ $(document).ready(function() {
 	    dots: false,
 	    fade: true,
 	    asNavFor: '.projects_menu',
+	    responsive: [
+		  {
+		    breakpoint: 801,
+		    settings: {
+		      arrows: true,
+		      dots: true,
+		      prevArrow: '<span class="slick-prev">&nbsp;</span>',
+		      nextArrow: '<span class="slick-next">&nbsp;</span>',
+		      customPaging: function (slider, i) {
+			//FYI just have a look at the object to find aviable information
+			//press f12 to access the console
+			//you could also debug or look in the source
+			console.log(slider);
+			return '<strong>0' + (i + 1) + '</strong>/0' + slider.slideCount ;
+		      }
+		    }
+		  },
+		]
 	});
 	
 	
@@ -272,8 +290,91 @@ $(document).ready(function() {
 		       ]
 		    });
 		}
+		
+		
+		if ( window.innerWidth>1400 && $('.production_block').hasClass('slick-initialized') ) {
+		    $('.production_block').slick('unslick');
+		} else if ( window.innerWidth<=1400 && !$('.production_block').hasClass('slick-initialized') ) {
+		    $('.production_block').slick({
+		        prevArrow: '<span class="slick-prev"></span>',
+		        nextArrow: '<span class="slick-next"></span>',
+		        slidesToShow: 4,
+		        slidesToScroll: 1,
+		        responsive: [
+			{
+			   breakpoint: 1100,
+			   settings: { 
+			      slidesToShow: 3,
+			   }
+			},
+			{
+			   breakpoint: 801,
+			   settings: { 
+			      slidesToShow: 2,
+			   }
+			},
+			{
+			   breakpoint: 450,
+			   settings: { 
+			      slidesToShow: 1,
+			   }
+			},
+		       ]
+		    });
+		}
+		
+		if ( window.innerWidth>1000 && $('.advantages').hasClass('slick-initialized') ) {
+		    $('.advantages').slick('unslick');
+		} else if ( window.innerWidth<=1000 && !$('.advantages').hasClass('slick-initialized') ) {
+		    $('.advantages').slick({
+		        prevArrow: '<span class="slick-prev"></span>',
+		        nextArrow: '<span class="slick-next"></span>',
+		        slidesToShow: 3,
+		        slidesToScroll: 1,
+		        responsive: [
+			{
+			   breakpoint: 801,
+			   settings: { 
+			      slidesToShow: 2,
+			   }
+			},
+			{
+			   breakpoint: 600,
+			   settings: { 
+			      slidesToShow: 1,
+			   }
+			},
+		       ]
+		    });
+		}
+		
+		if ( window.innerWidth>1400 && $('.services_blocks').hasClass('slick-initialized') ) {
+		    $('.services_blocks').slick('unslick');
+		} else if ( window.innerWidth<=1400 && !$('.services_blocks').hasClass('slick-initialized') ) {
+		    $('.services_blocks').slick({
+		        prevArrow: '<span class="slick-prev"></span>',
+		        nextArrow: '<span class="slick-next"></span>',
+		        slidesToShow: 2,
+		        slidesToScroll: 1,
+		        responsive: [
+			{
+			   breakpoint: 651,
+			   settings: { 
+			      slidesToShow: 1,
+			   }
+			},
+		       ]
+		    });
+		}
 	});
 	
 	
 });
 
+
+
+
+	
+	//jQuery(document).ready(function(){
+	//    jQuery('.projects_menu .slick-list').scrollbar();
+	//});

@@ -1,28 +1,4 @@
-
 /* start header styles */
-/*#index #header { 
-    top: 0;
-    left: 0;
-    background: none;
-    border-bottom: 1px solid transparent;
-    //position: absolute;
-    
-    &:before {
-	opacity: 0;
-    }
-    
-
-    
-}
-#index #header.scroll {
-    //background: rgba(255, 255, 255, 0.9);
-    //box-shadow: 0 0 20px rgba(33, 97, 143, 0.25);
-    //background: #0b59d5 url(images/header_bg.png) no-repeat center / cover;
-    
-    &:before {
-    opacity: 1;
-    }
-}*/
 #header {
     //height: 105px;
     width: 100%;
@@ -314,17 +290,20 @@
     }
 }
 
-@media screen and (max-width: 1300px) {	
+@media screen and (max-width: 1400px) {	
     #header {
 	#logo {
-	    margin-right: 50px;
+	    margin-right: 66px;
 	}
     }
     
     .header_cont {
-	margin-left: 50px;
+	margin-left: 60px;
 	max-width: 220px;
 	font-size: 22px;
+    }
+    ul.main_menu {
+	letter-spacing: -0.2px;
     }
 }
 

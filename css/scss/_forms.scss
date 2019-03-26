@@ -2,6 +2,7 @@
 
 #main_form {
     z-index: 0;
+    overflow: visible;
     
     .in {
 	padding: 48px 60px 31px;
@@ -19,7 +20,7 @@
 	    height: 282px;
 	    top: -46px;
 	    right: 72/1546*100%;
-	    background: url(images/main_form_img.png) no-repeat center / cover;
+	    background: url(images/main_form_img.png) no-repeat center / 100% auto;
 	}
 	
     }
@@ -57,6 +58,8 @@
     }
     .form_block {
 	margin-top: -11px;
+	position: relative;
+	z-index: 2;
 	
 	input {
 	    width: 326px;
@@ -235,6 +238,46 @@
 	    padding-left: 30px;
 	}
     }
+    
+    #main_form {
+	.in {
+	    padding: 42px 60px 10px;
+	    margin-bottom: 30px;
+	    
+	    &:after {
+		width: 247px;
+		top: -57px;
+		right: 5.1%;
+	    }
+	}
+	p {
+	    margin-right: 56px;
+	}
+	.form_block input {
+	    width: 281px;
+	    margin-right: 40px;
+	}
+    }
+}
+@media screen and (max-width: 1300px) {
+    #main_form {
+	.in {
+	    padding: 35px 60px 10px;
+	    margin-bottom: 30px;
+	    height: auto;
+	}
+	h3 {
+	    margin-bottom: 25px;
+	}
+	p {
+	    margin-right: 0;
+	    float: none;
+	    margin-bottom: 25px;
+	}
+	.form_block {
+	    margin-top: 0;
+	}
+    }
 }
 @media screen and (max-width: 1200px) {
     .form_block {
@@ -252,6 +295,13 @@
 	    width: 150px;
 	}
     }
+    #main_form {
+	.in {
+	    &:after {
+		display: none;
+	    }
+	}
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -262,7 +312,36 @@
     }
 }
 @media screen and (max-width: 600px) {
-    
+    #main_form {
+	text-align: center;
+	.in {
+	    padding: 22px 10px 10px;
+	    margin-bottom: 30px;
+	}
+	h3 {
+	    margin-bottom: 18px;
+	    letter-spacing: 0;
+	}
+	p {
+	    padding-left: 24px;
+	    text-align:  left;
+	    margin-bottom: 13px;
+	    &:before {
+		display: none;
+	    }
+	    &:after {
+		width: 5px;
+		height: 5px;
+		top: 10px;
+	    }
+	}
+	.form_block {
+	    input {
+		width: 100%;
+		margin-bottom: 31px;
+	    }
+	}
+    }
 }
 
 @media screen and (max-width: 450px) {

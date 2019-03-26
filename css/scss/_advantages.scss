@@ -88,9 +88,53 @@
 @media screen and (max-width: 1400px) {
     #advantages {
 	.in {
-	    padding-top: 80px;
+	    padding-top: 20px;
 	}
 	
+    }
+    
+    .advantages {
+	.adv_item {
+	    margin: 0 2% 40px 0;
+	    padding-left: 33px;
+	    padding-top: 38px;
+	    
+	    &:nth-child(1) {
+		width: 22.3%;
+	    }
+	    &:nth-child(2) {
+		width: 28.1%;
+	    }
+	    &:nth-child(3) {
+		width: 20.8%;
+	    }
+	    &:nth-child(4) {
+		margin-right: 0;
+		width: 22.8%;
+	    }
+	    
+	    &:before, &:after {
+		width: 101px;
+		height: 101px;
+	    }
+	    
+	    &:after {
+		top: 23px;
+		left: 17px;
+		background-size: 9px auto;
+	    }
+	    .num {
+		font-size: 75px;
+		line-height: 75px;
+		margin-bottom: 4px;
+	    }
+	    
+	    .h3 {
+		font-size: 15px;
+		line-height: 19px;
+		margin-bottom: 2px;
+	    }
+	}
     }
 }
 
@@ -103,6 +147,13 @@
     #advantages {
 	
     }
+    
+    .advantages {
+	padding: 0 50px;
+	.adv_item {
+	    margin: 0 0px 40px 0;
+	}
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -113,6 +164,12 @@
 @media screen and (max-width: 600px) {
     #advantages {
 	
+    }
+    .advantages {
+	padding: 0 35px;
+	.adv_item {
+	    margin: 0;
+	}
     }
 }
 

@@ -46,11 +46,12 @@
     position: relative;
     
     .slick-list {
-	overflow: visible;
+	overflow: visible; 
     }
     
     .slider_menu_item {
-	margin-bottom: 58px;
+	margin-bottom: 33px; // 58px;
+	height: 62px;
 	cursor: pointer;
 	position: relative;
 	@include transition(all);
@@ -94,6 +95,10 @@
 	    
 	    img {
 		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		display: inline-block;
+		vertical-align: middle;
 	    }
 	}
 	
@@ -200,10 +205,71 @@ h3.clear {
     }
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1400px) {
     #promotions {
+	.in {
+	    padding-top: 1px;
+	    padding-bottom: 77px;
+	}
+    }
+    .promotions_block {
+	height: 496px;
+    }
+    
+    .slider {
+	
+	.slick-arrow {
+	    top: 13px;
+	    left: 61.2%;
+	    
+	    &.slick-next {
+		margin-left: 205px;
+	    }
+	    
+	}
 	
     }
+    
+    .slider_menu {
+	padding-top: 23px;
+	font-size: 16px;
+	line-height: 25px;
+	
+	.slider_menu_item {
+	    margin-bottom: 23px; // 58px;
+	    height: 62px;
+	}
+    }
+    
+    .slider_more {
+	margin-left: 27.1%;
+	.slider_more_item {
+	      
+	    .img {
+		height: 428px;
+		width: 53.7%;
+	    }
+	    
+	    .text {
+		margin-left: 61.2%;
+		padding-top: 57px;
+	    }
+	    
+	    
+	    h3 {
+		margin-bottom: 23px;
+		letter-spacing: 1px
+	    }
+	    P {
+		margin-bottom: 43px;
+		line-height: 27px;
+		max-height: 185px;
+		overflow: hidden;
+	    }
+	}
+	
+    }
+
 }
 @media screen and (max-width: 1000px) {
     #promotions {
@@ -215,9 +281,86 @@ h3.clear {
     #promotions {
 	
     }
+    
+    .slider_menu {
+	display: none;
+    }
+    
+    .slider_more {
+	margin-left: 0%;
+	.slider_more_item {
+	      
+	    .img {
+		height: 428px;
+		width: 48%;
+	    }
+	    
+	    .text {
+		margin-left: 52%;
+		padding-top: 57px;
+	    }
+	    
+	    
+	    h3 {
+		margin-bottom: 23px;
+		letter-spacing: 1px
+	    }
+	    P {
+		margin-bottom: 43px;
+		line-height: 27px;
+		max-height: 185px;
+		overflow: hidden;
+	    }
+	}
+	
+    }
 }
 @media screen and (max-width: 600px) {
     #promotions {
+	h2 {
+	    margin-bottom: 38px;
+	}
+    }
+    .promotions_block {
+	height: 360px;
+    }
+    .slider {
+	.slick-arrow {
+	    top: 13px;
+	    left: 50px;
+	    
+	    &.slick-next {
+		margin-left: 200px;
+	    }
+	}
+    }
+    .slider_more {
+	.slider_more_item {
+	      
+	    .img {
+		display: none;
+	    }
+	    
+	    .text {
+		margin-left: 0;
+		padding-top: 65px;
+		//padding-left: 14px;
+		//padding-right: 14px;
+		text-align: center;
+		
+		
+		h3 {
+		    font-size: 15px;
+		    margin-bottom: 10px;
+		}
+		p{
+		    text-align: left;
+		    line-height: 24px;
+		    max-height: 215px;
+		    margin-bottom: 25px;
+		}
+	    }
+	}
 	
     }
 }
