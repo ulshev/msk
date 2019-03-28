@@ -12,6 +12,8 @@
 	<link rel="stylesheet" type="text/css" href="css/slick.css">
 	<link rel="stylesheet" type="text/css"  media="all" href="css/jquery.fancybox.css">
 	<link rel="stylesheet" type="text/css"  media="all" href="css/font.css">
+	    
+	    <link rel="stylesheet" type="text/css"  media="all" href="css/ModalWindow.css" /><!-- !!! стили не подключать -->
 	
 	<link rel="stylesheet" type="text/css"  media="all" href="template_styles.css">
 	
@@ -211,5 +213,72 @@
 	
 	
     </div>
+    
+    <div class="gUniFormModalWindow form_block" id="123" style="display: none;">
+		    <div class="gUniFormHideScrollBar">
+		      <div class="gUniFormCn100">
+			<div class="gUniFormModalWindowContainer">
+			  <div class="gUniFormContainer">
+			    <div class="uFormHeading">Заказ товара</div>
+			    <p>Мы рады, что вы решили сделать заказ у нас! <br>
+			    Оставьте, пожалуйста, ваши контантные данные и опишите ваши пожелания к заказу. Чем подробнее вы опишите ваши требования, тем быстрее и точнее мы предложим вам самый выгодный вариант покупки. </p>
+                            <form id="123" enctype="multipart/form-data" action="/test.php?clear_cache=Y" method="post" class="gUniForm" data-id="10" data-unique="123">
+                              <div class="uFormLine">
+				<div class="uError uErrorField8"></div>
+                                <div class="uField">
+				    <input type="text" placeholder="Имя" name="FORM_FIELD_8">
+				</div>
+                              </div>
+                              <div class="uFormLine">
+				<div class="uError uErrorField9"></div>
+                                <div class="uField">
+				    <input type="text" placeholder="Телефон" name="FORM_FIELD_9" data-required="Y">
+				    <script type="text/javascript">$(function(){
+						$('input[name="FORM_FIELD_9"]').mask("+7 (999) 999-99-99", {clearIfNotMatch: false});
+					    });
+				    </script>
+                                </div>
+                              </div>
+			       <div class="uFormLine">
+				<div class="uError uErrorField8"></div>
+                                <div class="uField">
+				    <input type="text" placeholder="E-mail" name="FORM_FIELD_8">
+				</div>
+                              </div>
+			       
+			       
+			       <div class="uFormLine">
+				<div class="uError uErrorField8"></div>
+                                <div class="uField">
+				    <textarea placeholder="Пояснения к заказу: проект, предполагаемый бюджет и т.д."></textarea>
+				</div>
+                              </div>
+                            <div class="personalInfo">
+				<div class="webFormItem">
+				  <div class="webFormItemError"></div>
+				  <div class="webFormItemField">
+				    <input type="checkbox" id="id123" name="personalInfo" data-required="Y" value="Y"><label for="id123">Я согласен на обработку своих <a href='/personal-info/' target='_blank'>персональных данных</a></label>
+				  </div>
+				</div>
+			    </div>
+                            <div class="uFormGlobalErrors"></div>
+			    <div class="uformTools">
+			      <div class="uFormButton">
+				<a href="#" class="uFormSubmit"><!--img src="/local/components/dweb/uni.form/templates/modal-window/images/submitIcon.png" class="uToolsIcon" alt="Отправить"-->Отправить</a>
+			      </div>
+			      <!--div class="uFormButton">
+				<a href="#" class="uFormReset"><img src="/local/components/dweb/uni.form/templates/modal-window/images/resetIcon.png" class="uToolsIcon" alt="Сбросить">Сбросить</a>
+			      </div-->
+			    </div>
+			    <!--div class="eFormRequired">* - обязательные поля</div-->
+			    <!--hidden button for enter submit-->
+			    <input type="submit" class="eFormHidden" value="" />
+			  </form>
+			</div>
+			<a href="#" class="gUniFormModalWindowExit"></a>
+		      </div>
+		    </div>
+		  </div>
+		</div>
 </body>
 </html>

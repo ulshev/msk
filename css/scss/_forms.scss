@@ -2,12 +2,14 @@
 
 #main_form {
     z-index: 0;
-    overflow: visible;
+    //overflow: visible;
+    margin-bottom: 50px;
+    
+    padding-top: 50px;
     
     .in {
 	padding: 48px 60px 31px;
 	max-width: 1426px;
-	margin-bottom: 50px;
 	background: url(images/main_form_bg.jpg) no-repeat center top / cover;
 	color: #fff;
 	
@@ -118,6 +120,7 @@
 	width: calc(100% - 20px);
 	margin-right: 0;
 	margin-bottom: 15px;
+	line-height: 26px;
     }
     
     .check {
@@ -185,8 +188,10 @@
 	vertical-align: top;
 	padding-top: 4px;
     }
+
     
-    button[type="submit"], .uFormSubmit {
+}    
+.form_block button[type="submit"], .gUniForm .uFormSubmit, .gUniFormSuccessButton {
 	    margin-right: 0;
 	    margin-bottom: 20px;
 	    padding: 0 10px 0 10px;
@@ -212,8 +217,7 @@
 	    background-color: $color_a_hover;
 	}
     }
-    
-}
+  
 
 
 

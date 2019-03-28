@@ -237,8 +237,11 @@ main.content {
 
 .table {
     padding-bottom: 100px;
+    overflow: auto;
+    width: 100%;
     table {
-	min-width: 100%;
+	width: 100%;
+	min-width: 780px;
     }
     
     tr:nth-child(2n+1) {
@@ -296,6 +299,60 @@ main.content {
     }
 }
 
+#page404 {
+    #header {
+	&:before {
+	    background: #33383c url(images/header_bg_inner.jpg) no-repeat center / cover;
+	    height: 100%;
+	}
+    }
+    
+    .content {
+	background: #dde1e3 url(images/page404_bg.jpg) no-repeat center 105px / cover;
+	display: table-row;
+	height: 100%;
+	
+	.in {
+	    display: table-cell;
+	    height: 100%;
+	    vertical-align: middle;
+	}
+	
+	.text {
+	    max-width: $max-width;
+	    margin: 0 auto;
+	    text-align: center;
+	    padding-top: 179px;
+	    padding-right: 30px;
+	    height: 780px;
+	    box-sizing: border-box;
+	}
+	
+	.img404 {
+	    font-size: 196px;
+	    line-height: 162px;
+	    height: 200px;
+	    font-weight: 800;
+	    margin-bottom: 18px;
+	    font-family: $font_family_h;
+	    color: #000;
+	    padding-right: 12px;
+	    letter-spacing: 10px;
+	    
+	    img {
+		max-height: 100%;
+	    }
+	}
+	
+	p {
+	    font-size: 22px;
+	    line-height: 30px;
+	    margin: 0 auto 35px;
+	    max-width: 310px;
+	}
+    }
+}
+
 
 
 @media screen and (max-width: 1600px) {
@@ -328,13 +385,72 @@ main.content {
 	    line-height: 28px;
 	}
     }
+    
+    #page404 {
+	.content {
+	    .text {
+		padding-top: 160px;
+		height: 680px;
+	    }
+	    
+	    .img404 {
+		font-size: 174px;
+		line-height: 162px;
+		height: 175px;
+		letter-spacing: 8px;
+	    }
+	}
+    }
 }
 @media screen and (max-width: 1000px) {
-    
+    #page404 {
+	.content {
+	    background-position: center 75px;
+	    
+	    .text {
+		padding-top: 120px;
+		height: 580px;
+	    }
+	    .img404 {
+		font-size: 148px;
+		line-height: 140px;
+		height: 140px;
+		letter-spacing: 7px;
+	    }
+	    p {
+		font-size: 20px;
+		line-height: 30px;
+		margin: 0 auto 15px;
+		max-width: 250px;
+	    }
+	}
+    }
 }
 
 @media screen and (max-width: 800px) {
-    
+    #page404 {
+	.content {
+	    background-position: center 60px;
+	    
+	    .text {
+		padding-top: 95px;
+		height: 480px;
+	    }
+	    .img404 {
+		font-size: 124px;
+		line-height: 120px;
+		height: 120px;
+		margin-bottom: 10px;
+		letter-spacing: 5px;
+	    }
+	    p {
+		font-size: 18px;
+		line-height: 25px;
+		margin: 0 auto 15px;
+		max-width: 200px;
+	    }
+	}
+    }
 }
 @media screen and (max-width: 600px) {
     .content.main_section {
@@ -360,7 +476,30 @@ main.content {
 }
 
 @media screen and (max-width: 450px) {
-    
+    #page404 {
+	.content {
+	    background-position: center 60px;
+	    
+	    .text {
+		padding-top: 95px;
+		height: 400px;
+		padding-right: 16px;
+	    }
+	    .img404 {
+		font-size: 100px;
+		line-height: 90px;
+		height: 90px;
+		margin-bottom: 5px;
+		letter-spacing: 5px;
+	    }
+	    p {
+		font-size: 16px;
+		line-height: 22px;
+		margin: 0 auto 10px;
+		max-width: 180px;
+	    }
+	}
+    }
 }
 
 /* end projects styles */

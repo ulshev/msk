@@ -1,0 +1,131 @@
+/* start ModalWindow styles */ 
+
+.gUniFormModalWindow, .gUniFormSuccess {
+    background: rgba(255, 255, 255, 0.65);
+}
+
+.gUniFormModalWindowContainer, .gUniFormSuccessContainer {
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    background: #33383c url(images/popup_bg.jpg) no-repeat center bottom / cover;
+    border-radius: 0px;
+    padding: 24px;
+    width: 536px;
+    color: #fff;
+    padding: 100px 50px 45px 60px;
+    box-sizing: border-box;
+    line-height: 30px;
+    border: 0;
+    height: auto;
+    
+    p {
+        margin-bottom: 40px;
+    }
+}
+.gUniFormSuccessContainer {
+    margin-top: -194px;
+}
+
+.gUniFormSuccessText {
+    line-height: 30px;
+    text-align: left;
+    padding: 0 0 50px;
+    
+    p {
+        margin-bottom: 10px;
+    }
+}
+
+.gUniFormSuccessBg {
+    background: none;
+    border-radius: 0;
+}
+
+.gUniFormModalWindowExit, .gUniFormSuccessExit {
+    background: url(images/close.png) no-repeat center;
+    right: 21px;
+    top: 21px;
+    height: 25px;
+    width: 25px;
+    border: 2px solid $color_a;
+    border-radius: 15px;
+    @include transition(all);
+    
+    &:hover {
+        background-position: center;
+        transform: rotate(90deg);
+    }
+}
+
+.gUniFormModalWindow .uFormHeading, .gUniFormSuccessHeading {
+    font-weight: 800;
+    line-height: 130%;
+    margin-bottom: 30px;
+    font-family: $font_family_h;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    font-size: 28px;
+    line-height: 45px;
+    text-align: left;
+    padding: 0;
+}
+
+.uFormLine {
+    margin-bottom: 30px;
+    
+    &:nth-child(1), &:nth-child(2) {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(50% - 10px);
+    }
+    &:nth-child(1) {
+        margin-right: 15px;
+    }
+    
+    input[type="text"], textarea {
+        margin-right: 0;
+        width: 100%;
+        padding: 5px 16px;
+        margin-bottom: 0;
+        
+        &:focus, &:hover {
+            background: transparent;
+            border-color: #fff;
+        }
+    }
+
+}    
+.personalInfo {
+    margin-bottom: 40px;
+    label {
+        font-size: 14px;
+        padding-top: 4px;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 1600px) {
+    
+}
+
+@media screen and (max-width: 1300px) {
+    
+}
+@media screen and (max-width: 1000px) {
+    
+}
+
+@media screen and (max-width: 800px) {
+    
+}
+@media screen and (max-width: 600px) {
+    
+}
+
+@media screen and (max-width: 450px) {
+    
+}
+
+/* end ModalWindow styles */

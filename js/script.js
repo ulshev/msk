@@ -79,7 +79,7 @@ $(document).ready(function() {
 	setTimeout (function(){
 		$('#index #header').addClass('animated');
 		
-	}, 1000); 
+	}, 0); 
 	$(window).on('load scroll', function(){
 	    $('.main_section').each(function(){
 		if ( $(this).offset().top < ($(document).scrollTop() + window.innerHeight*0.6 ) ) {
@@ -230,6 +230,29 @@ $(document).ready(function() {
 	    //fade: true,
 	    prevArrow: '<span class="slick-prev">&nbsp;</span>',
 	    nextArrow: '<span class="slick-next">&nbsp;</span>',
+	    responsive: [
+		  {
+		    breakpoint: 1401,
+		    settings: {
+		      vertical: false,
+		      slidesToShow: 3,
+		    }
+		  },
+		  {
+		    breakpoint: 1000,
+		    settings: {
+		      slidesToShow: 2,
+		      vertical: false,
+		    }
+		  },
+		  {
+		    breakpoint: 600,
+		    settings: {
+		      slidesToShow: 1,
+		      vertical: false,
+		    }
+		  },
+		]
 	});
 	
 	$('.products_images .main_img').slick({
