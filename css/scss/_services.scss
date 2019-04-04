@@ -267,6 +267,30 @@
 	    margin-bottom: 33px;
 	}
     }
+    .preview_blocks {
+	margin: 0;
+	.preview_bl {
+	    width: auto;
+	    margin: 0 0 50px;
+	    height: auto;
+	    
+	    &:nth-child(2) {
+		width: 100%;
+	    };
+	    .img {
+		height: 177px;
+	    }
+	    
+	    .text {
+		padding-top: 190px;
+		p{
+		    line-height: 24px;
+		    height: auto;
+		    max-height: 130px;
+		}
+	    }
+	}
+    }
     .preview_blocks.services_blocks {
 	padding: 0 37px;
 	margin-bottom: 33px;

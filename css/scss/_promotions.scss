@@ -143,9 +143,12 @@
     margin-top: 70px;
     font-weight: 600;
     margin-bottom: 55px;
+    max-width: 410px;
+    overflow: hidden;
     
     a {
 	color: #bd9515;
+	display: inline-block;
     }
     
     .prev {
@@ -164,6 +167,7 @@
 ;	}
     }
     .next {
+	float: right;
 	&:after {
 	    content: '';
 	    display: inline-block;
@@ -175,21 +179,6 @@
 	    vertical-align: -5px;
 	    background: url(images/arr_small_orange.png) no-repeat center;
 ;	}
-    }
-}
-
-.project_description {
-    padding-bottom: 25px;
-    p {
-	position: relative;
-	margin-bottom: 5px;
-	
-	em {
-	    display: inline-block;
-	    width: 215px;
-	    color: #7f7f7f;
-	    font-style: normal;
-	}
     }
 }
 
@@ -214,6 +203,11 @@ h3.clear {
     }
     .promotions_block {
 	height: 496px;
+    }
+    
+    .prev_next {
+	margin-top: 20px;
+	margin-bottom: 30px;
     }
     
     .slider {
@@ -272,8 +266,9 @@ h3.clear {
 
 }
 @media screen and (max-width: 1000px) {
-    #promotions {
-	
+    .prev_next {
+	margin-top: 0px;
+	margin-bottom: 30px;
     }
 }
 
@@ -363,11 +358,38 @@ h3.clear {
 	}
 	
     }
+    .prev_next {
+	margin-top: 30px;
+	
+	.next {
+	    float: right;
+	}
+    }
 }
 
 @media screen and (max-width: 450px) {
-    #promotions {
+    .prev_next {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	a {
+	    overflow: hidden;
+	    height: 25px;
+	    width: 130px;
+	    position: relative;
+	}
+	.prev {
+	    margin-right: 0px;
+	}
 	
+	.next {
+	    width: 120px;
+	    
+	    &:after {
+		position: absolute;
+		top: 3px;
+		right: 0;
+	    }
+	}
     }
 }
 

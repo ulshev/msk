@@ -115,11 +115,12 @@ main.content {
     padding-top: 1px;
     ul {
 	padding-bottom: 15px;
-	overflow: hidden;
+	//overflow: hidden;
 	li {
 	    position:  relative;
 	    padding-left: 36px;
 	    margin-bottom: 5px;
+	    overflow: hidden;
 	    
 	    &:before {
                 content: '';
@@ -140,12 +141,13 @@ main.content {
 	position: relative;
 	z-index: 1;
 	padding-bottom: 25px;
-	overflow: hidden;
+	//overflow: hidden;
 	
 	li {
 	    position: relative;
 	    padding-left: 35px;
 	    margin-bottom: 5px;
+	    overflow: h;
 	    
 	    &:before {
 		position: absolute;
@@ -360,6 +362,20 @@ main.content {
 }
 
 @media screen and (max-width: 1400px) {
+    main.content {
+	padding-top: 120px;
+	padding-bottom: 80px;
+    }
+    #about_page .content {
+	#top {
+	    background-position: 35% bottom;
+	}
+    }
+    #top {
+	padding-top: 120px;
+	padding-bottom: 80px;
+    }
+    
     .left, .right {
 	max-width: calc(52.7% - 10px);
     }
@@ -402,7 +418,33 @@ main.content {
 	}
     }
 }
+@media screen and (max-width: 1100px) {
+    #about_page .content {
+	#top {
+	    background-position: 15% bottom;
+	}
+    }
+}
 @media screen and (max-width: 1000px) {
+    main.content {
+	padding-top: 100px;
+	padding-bottom: 60px;
+    }
+    #top {
+	padding-top: 100px;
+	padding-bottom: 60px;
+    }
+    
+    .left {
+	margin: 0px 45px 30px 0;
+    }
+    .right {
+	margin: 0px 0 30px 45px;
+    }
+    .left + h2, .left +h3, .left +h4, .right + h2, .right + h3, .right + h4 {
+	padding-top: 20px;
+	margin-bottom: 20px;
+    }
     #page404 {
 	.content {
 	    background-position: center 75px;
@@ -425,9 +467,62 @@ main.content {
 	    }
 	}
     }
+    
+    .table {
+	padding-bottom: 60px;
+	table {
+	    min-width: 560px;
+	}
+	
+	th {
+	    padding: 10px 10px 10px 30px;
+	}
+	
+	td {
+	    padding:  10px 0 10px 30px;
+	    
+	    &:first-child {
+		width: auto;
+	    }
+	    
+	    &:last-child {
+		width: auto;
+	    }
+	    
+	    &.color {
+		width: auto;
+	    }
+	}
+    }
 }
 
 @media screen and (max-width: 800px) {
+    main.content {
+	padding-top: 80px;
+	padding-bottom: 50px;
+    }
+    #top {
+	padding-top: 80px;
+	padding-bottom: 50px;
+	
+	.text {
+	    padding-right: 20%;
+	}
+    }
+    .bread_crumbs {
+	margin-bottom: 25px;
+    }
+    .left, .right {
+    }
+    .left {
+	margin: 0px 30px 20px 0;
+    }
+    .right {
+	margin: 0px 0 20px 30px;
+    }
+    .left + h2, .left +h3, .left +h4, .right + h2, .right + h3, .right + h4 {
+	padding-top: 0px;
+    }
     #page404 {
 	.content {
 	    background-position: center 60px;
@@ -453,6 +548,12 @@ main.content {
     }
 }
 @media screen and (max-width: 600px) {
+    
+    #about_page .content {
+	#top {
+	    background-position: 20% bottom;
+	}
+    }
     .content.main_section {
 	.in {
 	    padding-bottom: 20px;
@@ -473,9 +574,24 @@ main.content {
 	    line-height: 24px;
 	}
     }
+    .left, .right {
+	max-width: 100%;
+	float: none;
+    }
+    .left {
+	margin: 0px 0px 20px 0;
+    }
+    .right {
+	margin: 0px 0 20px 0px;
+    }
 }
 
 @media screen and (max-width: 450px) {
+    #about_page .content {
+	#top {
+	    background-position: 25% bottom;
+	}
+    }
     #page404 {
 	.content {
 	    background-position: center 60px;
@@ -499,6 +615,11 @@ main.content {
 		max-width: 180px;
 	    }
 	}
+    }
+}
+@media screen and (max-width: 370px) {
+    #top .text {
+	padding-right: 0%;
     }
 }
 

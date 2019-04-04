@@ -232,7 +232,7 @@ $(document).ready(function() {
 	    nextArrow: '<span class="slick-next">&nbsp;</span>',
 	    responsive: [
 		  {
-		    breakpoint: 1401,
+		    breakpoint: 1301,
 		    settings: {
 		      vertical: false,
 		      slidesToShow: 3,
@@ -262,7 +262,17 @@ $(document).ready(function() {
 	    fade: true,
 	    //variableWidth: true,
 	    adaptiveHeight: true,
-	    asNavFor: '.products_images .small_images'
+	    asNavFor: '.products_images .small_images',
+	    responsive: [
+		  {
+		    breakpoint: 451,
+		    settings: {
+		      arrows: true,
+		      prevArrow: '<span class="slick-prev">&nbsp;</span>',
+		      nextArrow: '<span class="slick-next">&nbsp;</span>',
+		    }
+		  },
+		]
 	  });
 	$('.products_images .small_images').slick({
 	    slidesToShow: 3,
@@ -277,17 +287,17 @@ $(document).ready(function() {
 	    focusOnSelect: true,
 	    responsive: [
 		  {
-		    breakpoint: 1021,
+		    breakpoint: 801,
 		    settings: {
 		      vertical: false,
-		      slidesToShow: 3,
+		      slidesToShow: 2,
 		    }
 		  },
 		  {
-		    breakpoint: 350,
+		    breakpoint: 601,
 		    settings: {
-		      slidesToShow: 2,
-		      vertical: false,
+		      vertical: true,
+		      slidesToShow: 3,
 		    }
 		  },
 		]
