@@ -110,22 +110,58 @@
     
 }
 
-@media screen and (max-width: 1300px) {
-    
+@media screen and (max-width: 1400px) {
+    .gUniFormModalWindow .uFormHeading, .gUniFormSuccessHeading {
+        font-size: 22px;
+        line-height: 45px;
+    }
 }
 @media screen and (max-width: 1000px) {
     
 }
 
 @media screen and (max-width: 800px) {
+    .gUniFormModalWindowContainer, .gUniFormSuccessContainer {
+        width: 500px;
+        padding: 70px 40px 35px 40px;
+    }
     
+    .gUniFormModalWindow .uFormHeading, .gUniFormSuccessHeading {
+        font-size: 20px;
+        line-height: 45px;
+    }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
+    .gUniFormModalWindowContainer, .gUniFormSuccessContainer {
+        width: 400px;
+        padding: 50px 30px 30px 30px;
+        line-height: 20px;
+    }
+    .gUniFormSuccessContainer {
+        width: 300px;
+    }
+    .gUniFormModalWindow .uFormHeading, .gUniFormSuccessHeading {
+        font-size: 16px;
+        line-height: 45px;
+    }
+    .uFormLine {
+        margin-bottom: 30px;
+        
+        &:nth-child(1), &:nth-child(2) {
+            width: 100%;
+        }
+        &:nth-child(1) {
+            margin-right: 0px;
+        }
     
+    }
 }
 
 @media screen and (max-width: 450px) {
-    
+    .gUniFormModalWindowContainer, .gUniFormSuccessContainer {
+        width: 300px;
+        padding: 40px 20px 30px 20px;
+    }
 }
 
 /* end ModalWindow styles */
